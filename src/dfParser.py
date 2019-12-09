@@ -13,6 +13,14 @@ def age_parse(df, age):
 
     return df
 
+def country_parse(df, country):
+
+    if country == 'All':
+        return df
+    else:
+        df = df[(df['country'] == country)]
+        return df
+
 def paginate(page):
     """Reduces ranked dataframe according to page parameter"""
     end_ind = page * 12
