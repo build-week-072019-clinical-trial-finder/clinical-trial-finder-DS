@@ -50,8 +50,10 @@ def fetch_data():
   page = data['page']
   gender = data['gender']
   age = data['age']
+  country = data['country']
 
-  sorted_df = score_docs(search_freq(tokenizer(user_search), df), df)
+  country_df = country_parse(df, country)
+  sorted_df = score_docs(search_freq(tokenizer(user_search), country_df), country_df)
   gendered_df = gender_parse(sorted_df, gender)
   final_df = age_parse(gendered_df, age)
 
