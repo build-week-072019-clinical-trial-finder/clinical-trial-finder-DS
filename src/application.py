@@ -21,24 +21,6 @@ def root():
     """
     return "Test Successful"
 
-@app.route('/fetch_data', methods=['POST'])
-def fetch_data_old():
-  """
-  API route that receives search query and returns clinical trials that match search
-  """
-  data = request.get_json(force=True)
-
-  user_search = data['user_search'] 
-
-  sorted_df = score_docs(search_freq(tokenizer(user_search), df), df)
-
-  sorted_df = sorted_df[:15] 
-
-  return json_response(brief_summary=sorted_df['brief_summary'], city=sorted_df['city'],
-                       condition=sorted_df['condition'], country=sorted_df['country'],
-                       official_title = sorted_df['official_title'], url = sorted_df['url'],
-                       state=sorted_df['state'])
-
 @app.route('/fetch_search', methods=['POST'])
 def fetch_data():
   """
