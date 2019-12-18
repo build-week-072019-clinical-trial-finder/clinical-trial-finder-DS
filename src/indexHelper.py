@@ -41,7 +41,7 @@ def score_docs(index, df, score=0):
 
     df = df.sort_values('score', ascending=False)
 
-    df = df.loc[df['score'] > 6]
+    df = df.loc[df['score'] > 3]
 
     return df
 
