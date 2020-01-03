@@ -12,7 +12,7 @@ Goals for the Data Science Team:
 * A search engine that returns relevant clinical trials based upon a customer query.
 
 ## [Flask API](https://github.com/build-week-072019-clinical-trial-finder/clinical-trial-finder-DS/tree/master/eb-flask)
-Contains the flask API which acts as Clinical Trial Finder's search engine.
+Clinical Trial Finder's search engine.
 
 ## [Notebooks](https://github.com/build-week-072019-clinical-trial-finder/clinical-trial-finder-DS/tree/master/Notebooks)
 Used for data retrieval, cleaning, and modeling.
